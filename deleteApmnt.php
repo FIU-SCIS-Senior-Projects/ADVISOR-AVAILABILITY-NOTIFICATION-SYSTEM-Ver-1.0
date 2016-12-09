@@ -56,15 +56,14 @@ $result = mysqli_query($con,$sql);
         
   $Name =   $row['FirstName'] ." ".$row['LastName'];
           //$row['FirstName'] +" " + $row['LastName'];
+  $stud_id =$row['pid'];
         
- //send student name to advisor
+ //send student name and id to advisor
  
 mysqli_select_db($con,"login");
-$sql="UPDATE `login_details` SET `student_name` = '$Name' WHERE `login_details`.`id` = '$advisorID'";
+$sql="UPDATE `login_details` SET `student_name` = '$Name',`student_id` ='$stud_id', `Status` ='Waiting for Accept' WHERE `login_details`.`id` = '$advisorID'";
 $result = mysqli_query($con,$sql);
 $row = mysqli_fetch_array($result);
-
-
 
 //execute delete query
 mysqli_select_db($con,"login");

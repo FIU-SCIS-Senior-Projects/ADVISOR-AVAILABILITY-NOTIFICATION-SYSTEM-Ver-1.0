@@ -64,7 +64,7 @@ if (!$result2)
                          $id = $row2['id'];
                          echo '<option value="'.$id.'">'.$id.'</option>';
                       }
-echo'<option selected="selected"></option>';
+echo'<option selected="selected">ANY</option>';
  
 echo '</select>';
 ?>

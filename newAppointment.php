@@ -65,7 +65,7 @@ if (!$result2)
                          $id = $row2['id'];
                          echo '<option value="'.$id.'">'.$id.'</option>';
                       }
-
+                //echo'<option selected="selected">ANY</option>';
  
 echo '</select>';
 ?>
@@ -140,7 +140,7 @@ else
 {
 
 // save the data to the database
-$sql="INSERT apointments SET firstname='$firstname', lastname='$lastname',advisor = '$advisor',panther_id='$pid',appointment_time='$time'";
+$sql="INSERT apointments SET firstname='$firstname', lastname='$lastname',advisor = '$advisor',pid='$pid',appointment_time='$time'";
 $result = mysqli_query($con,$sql);
 if (!$result) {
     printf("Error: %s\n", mysqli_error($con));

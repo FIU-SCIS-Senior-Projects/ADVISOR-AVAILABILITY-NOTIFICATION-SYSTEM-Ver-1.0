@@ -57,13 +57,27 @@ $result = mysqli_query($con,$sql);
         
   $Name =   $row['FirstName'] ." ".$row['LastName'];
           //$row['FirstName'] +" " + $row['LastName'];
-        
- //send student name to advisor
+   $pid =$row['pid'];     
+ //send student name and ID to advisor
  
 mysqli_select_db($con,"login");
-$sql="UPDATE `login_details` SET `student_name` = '$Name', `Status` ='Waiting for Accept' WHERE `login_details`.`id` = '$advisorID'";
+$sql="UPDATE `login_details` SET `student_name` = '$Name', `Status` ='Waiting for Accept',`student_id`= '$pid' WHERE `login_details`.`id` = '$advisorID'";
 $result = mysqli_query($con,$sql);
 $row = mysqli_fetch_array($result);
+
+
+  mysqli_select_db($con,"login");
+$sql="Select * FROM walk_in WHERE id=$walkID";
+$result = mysqli_query($con,$sql);  
+  $row = mysqli_fetch_array($result); 
+  
+//checking to see if the student_id got updated or not:
+$stud_id = $row['student_id'];
+  
+//if()
+//{
+    
+//}
 
 
 

@@ -1,7 +1,7 @@
 
 <?php
 //replace all passwords in login_details witht he following password
-    $newPwd = '12345';
+    $newPwd = '1234';
     require 'sqliConnect.php';
 $con = get_sqli();
 

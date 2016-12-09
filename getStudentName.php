@@ -15,7 +15,7 @@ $result = mysqli_query($con,$sql);
 
  $row = mysqli_fetch_array($result); 
  
- $reslt= $row['student_name'];
+ $reslt= "Student: ".$row['student_name']." ID: ".$row['student_id'];
  echo $reslt;
 
 mysqli_close($con);
