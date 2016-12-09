@@ -1,9 +1,10 @@
 # ADVISOR-AVAILABILITY-NOTIFICATION-SYSTEM-Ver-1.0
 ADVISOR AVAILABILITY NOTIFICATION SYSTEM Ver 1.0
-
 Installation:
 
+
 Note: The advisor page is only correctly working on Chrome Browsers
+
 
 A person with IT knowledge is required to setup this program, a person with knowledge of Databases and web server setups.
 
@@ -14,9 +15,9 @@ I will provide two options for setting up the website:
 Option 1:
 Install XAMPP v3.2.2 ( look into how to install XAMPP). 
 Start the apache and the SQL Server that comes with XAMPP.
-In the XAMPP installation directory insert the file provided named ADVISOR-AVAILABILITY-NOTIFICATION-SYSTEM-Ver-1.0 into htdocs.
-In the MySQL row click admin and phpMyAdmin should come up in a browser. This is to set up the Database.
-On the top right side there should be an import button, click it and import the .sql script that is provided in the file named SQLscripts
+In the XAMPP installation directory insert the file provided from github(https://github.com/FIU-SCIS-Senior-Projects/ADVISOR-AVAILABILITY-NOTIFICATION-SYSTEM-Ver-1.0)  named ADVISOR-AVAILABILITY-NOTIFICATION-SYSTEM-Ver-1.0 ( this folder is inside the ADVISOR-AVAILABILITY-NOTIFICATION-SYSTEM-Ver-1.0-master folder)  into htdocs.
+In the MySQL row in XAMPP click admin and phpMyAdmin should come up in a browser. This is to set up the Database.
+On the top right side there should be an import button, click it and import the .sql script that is provided in the file named databaseSCRIPT
 Now find a file named sqliConnect.php in ADVISOR-AVAILABILITY-NOTIFICATION-SYSTEM-Ver-1.0 and edit it to add the required database information.  Originally the XAMPP database comes without a password, if you want your database to be secure you should add a password to it.
 
 
