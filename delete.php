@@ -1,3 +1,4 @@
+<audio id="sound1" src="nice-cut.mp3" preload="auto"></audio>
 <?php
 
 /*
@@ -104,13 +105,16 @@ $result4 = mysqli_query($con,$sql);
 
 mysqli_close($con);
         
- 
-    } 
+ //play error sound to show that walk-in could not be sent
+    }else
+    {
+        include 'playsoundtest.php';
+    }
     
         
     
   //redirect back  
-header("Location: desk.php");
+//header("Location: desk.php");
     
 
 }

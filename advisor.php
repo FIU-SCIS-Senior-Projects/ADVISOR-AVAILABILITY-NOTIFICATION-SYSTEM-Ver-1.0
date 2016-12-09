@@ -12,6 +12,16 @@ and open the template in the editor.
             $con = get_sqli();
 ?>
 
+<?php
+//redirect if not logged in
+if (isset($_SESSION["access_level"]) && $_SESSION["access_level"] == 0) {
+}
+else
+{
+     header("Location:index.php?err=2");
+}
+?>
+
 <html>
     <head>
         <meta charset="utf-8">
